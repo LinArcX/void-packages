@@ -1,0 +1,19 @@
+# Template file for 'Qogir-icon-theme'
+pkgname=Qogir-icon-theme
+version=20200410
+revision=1
+_commit=24ec0abc29743bbde420ba46305d53e49b62f863
+archs=noarch
+wrksrc="${pkgname}-${_commit}"
+short_desc="Colorful design icon theme for linux desktops"
+maintainer="linarcx <linarcx@gmail.com>"
+license="GPL-3.0-only"
+homepage="https://github.com/vinceliuice/Qogir-icon-theme"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
+checksum=71e6125f41d4f9697cd2623b48783308b1a895c0d24eb63f9d407e2918b75ab8
+
+do_install() {
+	vmkdir usr/share/icons
+	vmkdir usr/share/icons/Qogir-icon-theme
+	vcopy ./src/* usr/share/icons/Qogir-icon-theme
+}
