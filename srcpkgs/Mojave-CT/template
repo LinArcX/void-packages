@@ -1,0 +1,19 @@
+# Template file for 'Mojave-CT'
+pkgname=Mojave-CT
+version=20200410
+revision=1
+_commit=ee209a6bf5851933777a737565b5b5add5ffa2f3
+archs=noarch
+wrksrc="${pkgname}-${_commit}"
+short_desc="Mojave-CT icon theme"
+maintainer="linarcx <linarcx@gmail.com>"
+license="GPL-3.0-only"
+homepage="https://github.com/zayronxio/Mojave-CT"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
+checksum=d68497cecf3a96525f37db9b9167f1b86292b2de19ecfaeb3415644488c06fd3
+
+do_install() {
+	vmkdir usr/share/icons
+	vmkdir usr/share/icons/Mojave-CT
+	vcopy ./* usr/share/icons/Mojave-CT
+}
