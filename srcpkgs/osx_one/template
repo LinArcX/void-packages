@@ -1,0 +1,19 @@
+# Template file for 'osx_one'
+pkgname=osx_one
+version=20200410
+revision=1
+_commit=b28581fd2df8b148402294ce81d5c73b795bc9f8
+archs=noarch
+wrksrc="OSX_ONE-${_commit}"
+short_desc="MacOSX based Icon Pack"
+maintainer="linarcx <linarcx@gmail.com>"
+license="GPL-3.0-only"
+homepage="https://github.com/unc926/OSX_ONE"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
+checksum=21ab3db1d460fe7f40fcd97a2eba791fa387aaa1928e750c8b6821f4dfa211bb
+
+do_install() {
+	vmkdir usr/share/icons
+	vmkdir usr/share/icons/osx_one
+	vcopy ./MacOSX_ONE8/* usr/share/icons/osx_one
+}
