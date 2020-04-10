@@ -1,0 +1,22 @@
+# Template file for 'Newaita'
+pkgname=Newaita
+version=20200410
+revision=1
+_commit=138ea9ebdd876bc51e462e0158566da66b8b09aa
+archs=noarch
+wrksrc="${pkgname}-${_commit}"
+short_desc="Newaita icon theme"
+maintainer="linarcx <linarcx@gmail.com>"
+license="GPL-3.0-only"
+homepage="https://github.com/cbrnix/Newaita"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
+checksum=2eecbe894f3539a40b4619e83ce70f068191e04a2aa1cd639cd40ff6721fb1f2
+
+do_install() {
+	vmkdir usr/share/icons
+	vmkdir usr/share/icons/Newaita
+	vmkdir usr/share/icons/Newaita-dark
+
+	vcopy ./Newaita/* usr/share/icons/Newaita
+	vcopy ./Newaita-dark/* usr/share/icons/Newaita-dark
+}
