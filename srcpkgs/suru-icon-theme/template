@@ -1,0 +1,20 @@
+# Template file for 'suru-icon-theme'
+pkgname=suru-icon-theme
+version=20200410
+revision=1
+_commit=2d8102084eaf194f04076ec6949feacb0eb4a1ba
+wrksrc="${pkgname}-${_commit}"
+build_style=meson
+short_desc="Suru-icon-theme icon theme"
+maintainer="linarcx <linarcx@gmail.com>"
+license="GPL-3.0-only"
+homepage="https://github.com/snwh/suru-icon-theme"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
+checksum=3cb6d4b296737aa84f6d74e3edbb98d098bcbf2ca3e62717a21a4519324589a3
+#checksum=2eecbe894f3539a40b4619e83ce70f068191e04a2aa1cd639cd40ff6721fb1f2
+
+#do_install() {
+#	vmkdir usr/share/icons
+#	vmkdir usr/share/icons/suru-icon-theme
+#	vcopy ./* usr/share/icons/suru-icon-theme
+#}
