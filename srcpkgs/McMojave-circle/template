@@ -1,0 +1,19 @@
+# Template file for 'McMojave-circle'
+pkgname=McMojave-circle
+version=20200410
+revision=1
+_commit=f7e676203fa26dfd469178cf9697324b2c978be4
+archs=noarch
+wrksrc="${pkgname}-${_commit}"
+short_desc="McMojave-circle icon theme"
+maintainer="linarcx <linarcx@gmail.com>"
+license="GPL-3.0-only"
+homepage="https://github.com/vinceliuice/McMojave-circle"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
+checksum=6fe5197946263fe0851808c4a4607bf10982a923eec584e11815192630f38cd7
+
+do_install() {
+	vmkdir usr/share/icons
+	vmkdir usr/share/icons/McMojave-circle
+	vcopy ./src/* usr/share/icons/McMojave-circle
+}
