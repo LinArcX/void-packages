@@ -1,0 +1,19 @@
+# Template file for 'urutau-icons'
+pkgname=urutau-icons
+version=20200410
+revision=1
+_commit=81e97a0aa7a5b0a0b175849d78a5bf063fa4858a
+archs=noarch
+wrksrc="${pkgname}-${_commit}"
+short_desc="urutau-icons icon theme"
+maintainer="linarcx <linarcx@gmail.com>"
+license="GPL-3.0-only"
+homepage="https://github.com/btd1337/urutau-icons"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
+checksum=fbe38c1e74851d55ba18e9e9b635d789f8ce1a0b752e9aa10bddaaaa499d0fa8
+
+do_install() {
+	vmkdir usr/share/icons
+	vmkdir usr/share/icons/urutau-icons
+	vcopy ./* usr/share/icons/urutau-icons
+}
