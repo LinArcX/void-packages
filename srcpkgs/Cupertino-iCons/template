@@ -1,0 +1,19 @@
+# Template file for 'Cupertino-iCons'
+pkgname=Cupertino-iCons
+version=20200410
+revision=1
+_commit=a5e71d417d66d95c89de3ec8b75855ebd8f6e3ac
+archs=noarch
+wrksrc="${pkgname}-${_commit}"
+short_desc="Cupertino-iCons icon theme"
+maintainer="linarcx <linarcx@gmail.com>"
+license="GPL-3.0-only"
+homepage="https://github.com/USBA/Cupertino-iCons"
+distfiles="${homepage}/archive/${_commit}.tar.gz"
+checksum=091e346cc7cada500188ba14ccb8f3a24ea1bab3bca439b1f52727a80c14afb1
+
+do_install() {
+	vmkdir usr/share/icons
+	vmkdir usr/share/icons/Cupertino-iCons
+	vcopy ./* usr/share/icons/Cupertino-iCons
+}
