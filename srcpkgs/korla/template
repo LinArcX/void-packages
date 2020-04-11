@@ -1,0 +1,26 @@
+# Template file for 'korla'
+pkgname=korla
+version=1.2.6
+revision=1
+short_desc="Korla icon theme for GNU/Linux os"
+maintainer="linarcx <linarcx@gmail.com>"
+license="GPL-3.0-only"
+homepage="https://github.com/bikass/korla"
+distfiles="${homepage}/archive/v${version}.tar.gz"
+checksum=0b080ce5a096cd24f830095137b20cc85b96ae9c8981c93f7e0403466be0878a
+
+do_install() {
+	vmkdir usr/share/icons
+
+	vmkdir usr/share/icons/korla
+	vcopy ./korla/* usr/share/icons/korla
+
+	vmkdir usr/share/icons/korla-light
+	vcopy ./korla-light/* usr/share/icons/korla-light
+
+	vmkdir usr/share/icons/korla-pgrey
+	vcopy ./korla-pgrey/* usr/share/icons/korla-pgrey
+
+	vmkdir usr/share/icons/korla-light-panel
+	vcopy ./korla-light-panel/* usr/share/icons/korla-light-panel
+}
